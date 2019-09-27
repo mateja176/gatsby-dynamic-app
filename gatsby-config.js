@@ -6,6 +6,10 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-create-client-paths',
+      options: { prefixes: ['/app/*'] },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -32,4 +36,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
